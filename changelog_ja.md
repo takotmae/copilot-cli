@@ -1,3 +1,36 @@
+## 0.0.358 - 2025-11-14
+
+GPT-5.1、GPT-5.1-Codex、およびGPT-5.1-Codex-Miniモデルの利用可能性を修正するための復旧リリースです。
+
+## 0.0.357 - 2025-11-13
+
+画像リサイズの問題を修正するための復旧リリースです。
+
+## 0.0.356 - 2025-11-13
+
+- GPT-5.1、GPT-5.1-Codex、およびGPT-5.1-Codex-MiniがGitHub Copilot CLIで利用可能になりました。詳細については、[GitHubの変更ログ](https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/)をご覧ください
+
+## 0.0.355 - 2025-11-12
+
+- CLIエージェントが自身の機能に関する質問に答えるために、自身の`/help`とREADMEを読めるようにしました
+- `.agent.md`サフィックスを持つVSCode形式のカスタムエージェントの解析を改善しました
+- https://github.com/github/copilot-cli/issues/456 のような問題を修正するためにツール名をサニタイズしました
+- `ripgrep`をバンドルし、コードベースのより高速な検索のために`grep`と`glob`ツールを追加しました
+- UIに到達する前に不正なツール呼び出しの処理を修正しました（https://github.com/github/copilot-cli/issues/393 を部分的に対処）
+- マークダウンメッセージの二重行折り返しを防止しました
+- 予期しない上下矢印の動作を引き起こす複数行入力でファイルセレクターが使用されていたバグを修正しました（https://github.com/github/copilot-cli/issues/350 を修正）
+- カスタムエージェントのリモートMCPサーバー設定が適切にフェッチされないバグを修正しました
+- `/session`コマンドの出力に詳細を追加し、スタイルを改善しました
+- シェルツールの環境から内部の`NODE_ENV`変数を削除しました（https://github.com/github/copilot-cli/issues/151 を修正）
+- インタラクティブシェルツールを使用する際のメモリリークを修正しました
+- ファイルビュー出力の行番号フォーマットを改善しました（https://github.com/github/copilot-cli/issues/471 を修正）
+- デフォルトのシェルツールタイムアウトを短縮し、タイムアウトが失敗を意味しないようにプロンプト言語を更新しました
+- レンダリング前に端末の背景色をクエリするようにしました（https://github.com/github/copilot-cli/issues/36 を修正）
+- エージェントが自身のPIDに対して`pkill`を実行しないようにしました
+- 中止シグナル後に`copilot`が終了しないバグを修正しました（https://github.com/github/copilot-cli/issues/529 を修正）
+- Windows上の`!`コマンドが利用可能な場合にPowerShellを使用するようにしました（https://github.com/github/copilot-cli/issues/504 を修正）
+- Windows Terminalでキーボード入力が受け付けられないバグを修正しました
+
 ## 0.0.354 - 2025-11-03
 
 - LLMバックエンドエラー（認証失敗、クォータ枯渇、ネットワーク問題）により`-p`モードが失敗した場合、ゼロ以外のコードで終了するようにしました
